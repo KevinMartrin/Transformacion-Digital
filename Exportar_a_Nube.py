@@ -14,14 +14,56 @@ DRIVER   = "ODBC Driver 18 for SQL Server"
 CSV_DIR  = "."
 
 TABLES = {
+    "clientes_leads": {
+        "file": "clientes_leads.csv",
+        "rename": {
+            "E-mail":     "E_mail",
+            "Telefono 1": "Telefono_1",
+            "Telefono 2": "Telefono_2",
+            "C.P.":       "CP",
+        },
+        "dates":    ["Fecha_de_nacimiento"],
+        "date_fmt": "%d/%m/%Y",
+        "integers": ["Telefono_1", "Telefono_2", "CP"],
+    },
     "autos": {
-        "file": "TablasFinales/autos.csv",
+        "file": "autos.csv",
         "rename": {
             "Año Vehiculo": "Vehiculo_anio",
         },
+        "dates":    [],
+        "integers": ["Vehiculo_anio"],
+    },
+    "ejecutivos": {
+        "file": "ejecutivos.csv",
+        "rename": {
+            "E-mail": "E_mail",
+            "C.P.":   "CP",
+        },
+        "dates":    ["Fecha_de_nacimiento", "Fecha_de_ingreso"],
+        "date_fmt": "%d/%m/%Y",
+        "integers": ["Telefono", "CP"],
+    },
+    "empresas": {
+        "file": "empresas.csv",
+        "rename": {
+            "Tamaño personal": "Tamanio_personal",
+            "C.P.":            "CP",
+        },
+        "dates":    [],
+        "integers": ["CP"],
+    },
+    "ventas": {
+        "file": "ventas.csv",
+        "rename": {
+            "Duracion contrato":   "Duracion_contrato",
+            "Contrato finalizado": "Contrato_finalizado",
+        },
+        "dates":    ["Fecha"],
+        "date_fmt": "%d/%m/%Y",
+        "integers": [],
     },
 }
-
 
 
 def clean_dataframe(df: pd.DataFrame, rename_map: dict) -> pd.DataFrame:
