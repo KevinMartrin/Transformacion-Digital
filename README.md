@@ -5,7 +5,7 @@ El equipo se conforma por
 - Hillary Guadalupe García Ibarra - A00836353
 - Joanne Gandarillas Lorenzi - A01351974
 - Kevin Jesús Martínez Trinidad - A00834493
-- Hillary Guadalupe García Ibarra - A00836353
+- Mirian Ahuatzi Corona - A01737345 
 
 ## Nota sobre los scripts de Python
 Aquí se presentan 3 archivos secuenciales que juntos conforman el proceso completo, desde la importación de datos del archivo xlsx, hasta la exportación de los datos procesados a el SQL Server.
